@@ -345,6 +345,9 @@ def print_end(start):
 # ================================================================================
    
 if __name__ == '__main__':
+
+	start = datetime.today()
+
 	optlist, args = getopt.getopt(sys.argv[1:], 'l:r:12345h')
 	
 	LeftPath = ''
