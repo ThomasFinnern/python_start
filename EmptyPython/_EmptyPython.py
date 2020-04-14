@@ -1,12 +1,10 @@
 #!/usr/bin/python
 
 import os
-#import re
 import getopt
 import sys
 
 from datetime import datetime
-
 
 HELP_MSG = """
 _emptyPy supports ...
@@ -300,7 +298,9 @@ def dummyFunction():
 	#print ('       XXX: "' + XXX + '"')
 		
 
-##-------------------------------------------------------------------------------
+# ================================================================================
+# standard functions
+# ================================================================================
 
 def Wait4Key():		
 	try:
