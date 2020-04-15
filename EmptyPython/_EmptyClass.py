@@ -20,6 +20,9 @@ class _emptyClass:
 
     def __init__(self, configPathFileName=''):
 
+        print("Init _emptyClass: ")
+        print("configPathFileName: " + configPathFileName)
+
         self.__configPathFileName  = './LangManager.ini'
         if (len(configPathFileName) > 0):
             self.__configPathFileName = configPathFileName
@@ -178,12 +181,13 @@ class _emptyClass:
 
 ##-------------------------------------------------------------------------------
 
-        def dummyFunction():
-            print('    >>> Enter dummyFunction: ')
+    def dummyFunction(self):
+
+        print('    >>> Enter dummyFunction: ')
 
 
-            # print ('       XXX: "' + XXX + '"')
-            print('    >>> Exit dummyFunction: ')
+        # print ('       XXX: "' + XXX + '"')
+        print('    >>> Exit dummyFunction: ')
 
 
 # ================================================================================
