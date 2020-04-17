@@ -29,7 +29,6 @@ usage: _emptyPy.py -? nnn -? xxxx -? yyyy  [-h]
 	
 ------------------------------------
 ToDo:
-ToDo:
   * 
   * 
   * 
@@ -68,13 +67,14 @@ class _emptyClass:
             self.__configPathFileName = configPathFileName
 
         self.__isWriteEmptyTranslations = False
-        self.__isOverwriteSrcFiles = False
-        self.__isDoBackup = False
+
+        self.__iniFileName = ""
 
         self.__baseSrcPath = ""
         self.__baseTrgPath = ""
 
         self.__comparePaths = {} # compare multiple paths
+        self.__configurations = {}  # dictionary of name / value pairs
 
         # ---------------------------------------------
         # assign variables from config file
@@ -82,79 +82,56 @@ class _emptyClass:
 
         self.readConfigFile (self.__configPathFileName)
 
-    # --- isWriteEmptyTranslations ---
+    # --- propName ---
 
     @property
-    def isWriteEmptyTranslations(self):
-        return self.__isWriteEmptyTranslations
+    def propName(self):
+        return self.__propName
 
-    @isWriteEmptyTranslations.setter
-    def isWriteEmptyTranslations(self, isWriteEmptyTranslations):
-        self.__isWriteEmptyTranslations = isWriteEmptyTranslations
+    @propName.setter
+    def propName(self, propName):
+        self.__propName = propName
 
-    # --- isOverwriteSrcFiles ---
-
-    @property
-    def isOverwriteSrcFiles(self):
-        return self.__isOverwriteSrcFiles
-
-    @isOverwriteSrcFiles.setter
-    def isOverwriteSrcFiles(self, isOverwriteSrcFiles):
-        self.__isOverwriteSrcFiles = isOverwriteSrcFiles
-
-    # --- isDoBackup ---
-
-    @property
-    def isDoBackup(self):
-        return self.__isDoBackup
-
-    @isDoBackup.setter
-    def isDoBackup(self, isDoBackup):
-        self.__isDoBackup = isDoBackup
-
-    # --- baseSrcPath ---
-
-    @property
-    def baseSrcPath(self):
-        return self.__baseSrcPath
-
-    @baseSrcPath.setter
-    def baseSrcPath(self, baseSrcPath):
-        self.__baseSrcPath = baseSrcPath
-
-    # --- baseTrgPath ---
-
-    @property
-    def baseTrgPath(self):
-        return self.__baseTrgPath
-
-    @baseTrgPath.setter
-    def baseTrgPath(self, baseTrgPath):
-        self.__baseTrgPath = baseTrgPath
-
-    # --- comparePaths ---
-
-    @property
-    def comparePaths(self):
-        return self.__comparePaths
-
-    @comparePaths.setter
-    def comparePaths(self, comparePaths):
-        self.__comparePaths = comparePaths
+    # # --- propName ---
+    #
+    # @property
+    # def propName(self):
+    #     return self.__propName
+    #
+    # @propName.setter
+    # def propName(self, propName):
+    #     self.__propName = propName
+    #
+    # # --- propName ---
+    #
+    # @property
+    # def propName(self):
+    #     return self.__propName
+    #
+    # @propName.setter
+    # def propName(self, propName):
+    #     self.__propName = propName
+    #
 
     # --------------------------------------------------------------------
-    #
+    # readConfigFile
     # --------------------------------------------------------------------
     # https://wiki.python.org/moin/ConfigParserExamples
 
-    def readConfigFile (self, iniFileName):
-        # ToDo: Check if name exists otherwise standard
-        # ToDo: try catch ...
+    def readConfigFile (self, iniFileName=''):
+
         try:
             print('*********************************************************')
             print('readConfigFile')
             print('iniFileName: ' + iniFileName)
             print('---------------------------------------------------------')
+
+            # --- save config file name if given  -------------------------------
+
+            if (iniFileName != ''):
+                self.__iniFileName = iniFileName
+
+            print('configFileName (used): ' + self.__configFileName)
 
             #--- define used segments -------------------------------
 
