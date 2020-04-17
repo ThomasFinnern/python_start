@@ -9,7 +9,47 @@ from datetime import datetime
 HELP_MSG = """
 Reads config from external file LangManager.ini
 The segment selection tells which segment(s) to use for configuration
+
+usage: _emptyPy.py -? nnn -? xxxx -? yyyy  [-h]
+	-? nnn
+	-? 
+
+	
+	-h shows this message
+	
+	-1 
+	-2 
+	-3 
+	-4 
+	-5 
+	
+	
+	example:
+	
+	
+------------------------------------
+ToDo:
+ToDo:
+  * 
+  * 
+  * 
+  * 
+  * 
+  
 """
+
+#-------------------------------------------------------------------------------
+LeaveOut_01 = False
+LeaveOut_02 = False
+LeaveOut_03 = False
+LeaveOut_04 = False
+LeaveOut_05 = False
+
+#-------------------------------------------------------------------------------
+
+# ================================================================================
+# _emptyPy
+# ================================================================================
 
 # ================================================================================
 # config
