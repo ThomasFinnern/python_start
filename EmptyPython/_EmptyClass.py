@@ -73,6 +73,12 @@ class _emptyClass:
         self.__baseSrcPath = ""
         self.__baseTrgPath = ""
 
+        # --- init Lists -------------------------------
+
+        self.__tableNames = {}
+        self.__tableNames_j4x = {}
+        self.__tableNames_j3x = {}
+
         self.__comparePaths = {} # compare multiple paths
         self.__configurations = {}  # dictionary of name / value pairs
 
