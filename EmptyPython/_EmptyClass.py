@@ -139,6 +139,12 @@ class _emptyClass:
                 self.__password = password
 
 
+            #--- init Lists -------------------------------
+
+            self.__tableNames = {}
+            self.__tableNames_j4x = {}
+            self.__tableNames_j3x = {}
+
 
             #--- define used segments -------------------------------
 
