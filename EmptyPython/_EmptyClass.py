@@ -126,12 +126,19 @@ class _emptyClass:
             print('iniFileName: ' + iniFileName)
             print('---------------------------------------------------------')
 
-            # --- save config file name if given  -------------------------------
+            # --- save inputs if given  -------------------------------
 
             if (iniFileName != ''):
                 self.__iniFileName = iniFileName
+            print('iniFileName (used): ' + self.__iniFileName)
 
-            print('configFileName (used): ' + self.__configFileName)
+            if (user != ''):
+                self.__user = user
+
+            if (password != 'NOT_USED_AT_ALL'):
+                self.__password = password
+
+
 
             #--- define used segments -------------------------------
 
