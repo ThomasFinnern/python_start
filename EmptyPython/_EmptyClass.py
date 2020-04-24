@@ -219,7 +219,23 @@ class _emptyClass:
         return
 
 
-##-------------------------------------------------------------------------------
+    # -------------------------------------------------------------------------------
+    # ToDo: Return string instead of print
+    def Text(self):
+        # print ('    >>> Enter yyy: ')
+        # print ('       XXX: "' + XXX + '"')
+
+        ZZZ = ""
+
+        try:
+            print("Configurations: " + str(len(self.__configurations)))
+            for key, value in self.__configurations.items():
+                print("   " + key + " = '" + value + "'")
+
+        except Exception as ex:
+            print(ex)
+
+    ##-------------------------------------------------------------------------------
 
     def dummyFunction(self):
 
