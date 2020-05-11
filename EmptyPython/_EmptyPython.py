@@ -173,10 +173,11 @@ def _emptyPy (LeftPath, RightPath):
 		#--------------------------------------------------------------------
 		# 
 		#--------------------------------------------------------------------
-		
-		
-		
-		
+
+
+	except Exception as ex:
+		print(ex)
+
 	finally:
 		print ('exit _emptyPy')
 
@@ -189,7 +190,7 @@ def yyy (XXX):
 	ZZZ = ""
 	
 	try:
-
+		pass
 
 	except Exception as ex:
 		print(ex)
@@ -214,89 +215,6 @@ def yyy (XXX):
 #	print ('    <<< Exit yyy: ' + ZZZ)
 #	return ZZZ
 
-
-##-------------------------------------------------------------------------------
-##
-#def yyy (XXX):
-#	print ('    >>> Enter yyy: ')
-#	print ('       XXX: "' + XXX + '"')
-#	
-#	ZZZ = ""
-#	
-#	try:
-#
-#
-#	except Exception as ex:
-#		print(ex)
-#
-#	print ('    <<< Exit yyy: ' + ZZZ)
-#	return ZZZ
-
-##-------------------------------------------------------------------------------
-##
-#def yyy (XXX):
-#	print ('    >>> Enter yyy: ')
-#	print ('       XXX: "' + XXX + '"')
-#	
-#	ZZZ = ""
-#	
-#	try:
-#
-#
-#	except Exception as ex:
-#		print(ex)
-#
-#	print ('    <<< Exit yyy: ' + ZZZ)
-#	return ZZZ
-
-
-#-------------------------------------------------------------------------------
-# 
-def CopyFolder	(src,dst):
-	item_count = 0
-
-	if os.path.isdir(src):
-
-		for f in os.listdir(src):
-			try:
-				# not a useful file -> continue
-				#if f == '.' or f == '..' or f == 'CVS' or f == '.git':
-				#	continue
-
-				item = os.path.join(src, f)
-				if (os.path.isfile(item)):
-					#print ('\tCopy "' + item + '" to "' + dst + '"')
-										
-					shutil.copy2(item, dst)
-					item_count = item_count+1
-				else:
-					if (os.path.isdir(item)):
-						nextDst = os.path.join(dst, f)
-						
-						# Create path if it does not exists
-						if not os.path.exists(nextDst):
-							os.makedirs(nextDst)
-							
-						CopyFolder (item, nextDst)
-					
-			except (OSError, IOError) as e:
-				#say(e)
-				print (e)
-				#raise ...
-				
-				#pass
-	else:
-		print ('src: "' + src + '" is not a directory')
-		return 0
-
-	return item_count
-
-##-------------------------------------------------------------------------------
-	
-def dummyFunction():
-	print ('    >>> Enter dummyFunction: ')
-	#print ('       XXX: "' + XXX + '"')
-		
 
 # ================================================================================
 # standard functions

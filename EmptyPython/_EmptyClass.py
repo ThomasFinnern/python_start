@@ -206,12 +206,12 @@ class _emptyClass:
                 self.__comparePaths [self.__baseSrcPath] = self.__baseTrgPath
                 print('All: sourcPath: ' + self.__baseSrcPath + ' targetPath: ' + self.__baseTrgPath)
 
-        except Exception as ex:
-            print(ex)
-
         # --------------------------------------------------------------------
         #
         # --------------------------------------------------------------------
+
+        except Exception as ex:
+            print(ex)
 
         finally:
             print('exit readConfigFile')
@@ -235,15 +235,22 @@ class _emptyClass:
         except Exception as ex:
             print(ex)
 
-    ##-------------------------------------------------------------------------------
+    # -------------------------------------------------------------------------------
+    #
+    def yyy (XXX):
+        print ('    >>> Enter yyy: ')
+        print ('       XXX: "' + XXX + '"')
+        
+        ZZZ = ""
+        
+        try:
+            pass
 
-    def dummyFunction(self):
+        except Exception as ex:
+            print(ex)
 
-        print('    >>> Enter dummyFunction: ')
-
-
-        # print ('       XXX: "' + XXX + '"')
-        print('    >>> Exit dummyFunction: ')
+        print ('    <<< Exit yyy: ' + ZZZ)
+        return ZZZ
 
 
 # ================================================================================
