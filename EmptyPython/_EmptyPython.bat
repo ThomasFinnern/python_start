@@ -26,9 +26,9 @@ GOTO :EOF
 
 REM ------------------------------------------
 REM Adds given argument to the already known command arguments
-:AddNextArg 
-Set NextArg=%*
-Set CmdArgs=%CmdArgs% %NextArg%
-ECHO  '%NextArg%'
+:AddNextArg
+	Set NextArg=%*
+	Set CmdArgs=%CmdArgs% %NextArg%
+	ECHO  '%NextArg%'
 GOTO :EOF
 

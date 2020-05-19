@@ -176,7 +176,7 @@ def _emptyPy (LeftPath, RightPath):
 
 
 	except Exception as ex:
-		print(ex)
+		print('_emptyPy: ' + ex)
 
 	finally:
 		print ('exit _emptyPy')
@@ -193,34 +193,39 @@ def yyy (XXX):
 		pass
 
 	except Exception as ex:
-		print(ex)
+		print ('yyy: ' + ex)
 
 	print ('    <<< Exit yyy: ' + ZZZ)
 	return ZZZ
 
 ##-------------------------------------------------------------------------------
 ##
-#def yyy (XXX):
-#	print ('    >>> Enter yyy: ')
-#	print ('       XXX: "' + XXX + '"')
-#	
-#	ZZZ = ""
-#	
-#	try:
+# def yyy (XXX):
+# 	print ('    >>> Enter yyy: ')
+# 	print ('       XXX: "' + XXX + '"')
 #
+# 	ZZZ = ""
 #
-#	except Exception as ex:
-#		print(ex)
+# 	try:
+# 		pass
 #
-#	print ('    <<< Exit yyy: ' + ZZZ)
-#	return ZZZ
+# 	except Exception as ex:
+# 		print ('yyy: ' + ex)
+#
+# 	print ('    <<< Exit yyy: ' + ZZZ)
+# 	return ZZZ
+#
 
 
 # ================================================================================
 # standard functions
 # ================================================================================
 
-def Wait4Key():		
+def printEx(ex, functionName):
+    print('\r\n\r\n!!! Exception caught in : ' + functionName + '\r\n' + str(ex) + '\r\n\r\n')
+    return
+
+def Wait4Key():
 	try:
 		input("Press enter to continue")
 	except SyntaxError:

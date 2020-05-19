@@ -211,7 +211,7 @@ class _emptyClass:
         # --------------------------------------------------------------------
 
         except Exception as ex:
-            print(ex)
+            printEx(ex, inspect.stack()[1][3])
 
         finally:
             print('exit readConfigFile')
@@ -233,11 +233,11 @@ class _emptyClass:
                 print("   " + key + " = '" + value + "'")
 
         except Exception as ex:
-            print(ex)
+            printEx(ex, inspect.stack()[1][3])
 
     # -------------------------------------------------------------------------------
     #
-    def yyy (XXX):
+    def yyy (self, XXX):
         print ('    >>> Enter yyy: ')
         print ('       XXX: "' + XXX + '"')
         
@@ -247,7 +247,7 @@ class _emptyClass:
             pass
 
         except Exception as ex:
-            print(ex)
+            printEx(ex, inspect.stack()[1][3])
 
         print ('    <<< Exit yyy: ' + ZZZ)
         return ZZZ
@@ -256,6 +256,10 @@ class _emptyClass:
 # ================================================================================
 # standard functions
 # ================================================================================
+
+def printEx(ex, functionName):
+    print('\r\n\r\n!!! Exception caught in : ' + functionName + '\r\n' + str(ex) + '\r\n\r\n')
+    return
 
 def Wait4Key():
     try:
