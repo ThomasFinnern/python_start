@@ -221,6 +221,24 @@ def yyy (XXX):
 # standard functions
 # ================================================================================
 
+# -------------------------------------------------------------------------------
+# read all lines of a file into an text array without '\n'
+def readLinesOfFile(FileName):
+    print('    >>> Enter readLinesOfFile: ')
+    print('       FileName: "' + FileName + '"')
+
+    lines = []
+
+    try:
+        with open(FileName, 'r') as f:
+            # lines = f.readlines()
+            lines = [line.strip() for line in f.readlines()]
+    except Exception as ex:
+        printEx(ex, inspect.stack()[1][3])
+
+    print('    <<< Exit readLinesOfFile: ' + str(len(lines)))
+    return lines
+
 def printEx(ex, functionName):
     print('\r\n\r\n!!! Exception caught in : ' + functionName + '\r\n' + str(ex) + '\r\n\r\n')
     return
