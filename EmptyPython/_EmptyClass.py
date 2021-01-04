@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import inspect
 import os
 import getopt
 import sys
@@ -363,6 +364,7 @@ if __name__ == '__main__':
     print_header(start)
 
     _emptyClass = _emptyClass()
-
+    result = _emptyClass.DoSomethingCool()
+    
     print_end(start)
 
