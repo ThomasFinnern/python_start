@@ -176,7 +176,7 @@ def _emptyPy (LeftPath, RightPath):
 
 
 	except Exception as ex:
-		print('_emptyPy: ' + ex)
+		print(ex, inspect.stack()[1][3])
 
 	finally:
 		print ('exit _emptyPy')
@@ -193,9 +193,9 @@ def yyy (XXX):
 		pass
 
 	except Exception as ex:
-		print ('yyy: ' + ex)
+		printEx(ex, inspect.stack()[1][3])
 
-	print ('    <<< Exit yyy: ' + ZZZ)
+print ('    <<< Exit yyy: ' + ZZZ)
 	return ZZZ
 
 ##-------------------------------------------------------------------------------
